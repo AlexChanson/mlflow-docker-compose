@@ -17,8 +17,6 @@ services:
         depends_on:
             - minio
         container_name: mc
-        env_file:
-            - .env
         entrypoint: >
             /bin/sh -c "
             /tmp/wait-for-it.sh minio:9000 &&
